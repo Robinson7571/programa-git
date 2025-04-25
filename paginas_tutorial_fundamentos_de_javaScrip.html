@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial de Fundamentos de JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tutorial de Fundamentos de JavaScript</h1>
+    </header>
+
+    <div class="container">
+      <nav>
+        <h2>Contenido del Tutorial</h2>
+        <ol>
+          <li><a href="#introduccion">Introducción a JavaScript</a></li>
+          <li><a href="#variables">Variables y Tipos de Datos</a></li>
+          <li><a href="#operadores">Operadores en JavaScript</a></li>
+          <li><a href="#estructuras">Estructuras de Control</a></li>
+          <li><a href="#funciones">Funciones en JavaScript</a></li>
+        </ol>
+      </nav>
+
+      <section id="introduccion">
+        <h2>Introducción a JavaScript</h2>
+        <div class="tema">
+          <img src="img/js.jpg" alt="Introducción a JavaScript" />
+          <p>
+            JavaScript es un lenguaje de programación interpretado, orientado a
+            objetos, débilmente tipado y dinámico. Fue creado originalmente por
+            Brendan Eich en Netscape Communications Corporation y se ha
+            convertido en uno de los pilares fundamentales del desarrollo web
+            moderno.
+          </p>
+          <p>
+            JavaScript permite crear páginas web dinámicas, añadiendo
+            funcionalidades como validación de formularios, animaciones, efectos
+            visuales, interactividad con el usuario y comunicación asincrónica
+            con el servidor. A diferencia de HTML y CSS que se encargan de la
+            estructura y el diseño respectivamente, JavaScript se encarga del
+            comportamiento de la página.
+          </p>
+          <p>
+            Actualmente, JavaScript no solo se utiliza en el navegador
+            (frontend), sino también en el servidor (Node.js), aplicaciones
+            móviles (React Native), aplicaciones de escritorio (Electron) y
+            muchos otros entornos.
+          </p>
+        </div>
+      </section>
+
+      <section id="variables">
+        <h2>Variables y Tipos de Datos</h2>
+        <div class="tema">
+          <img
+            src="img/js1.jpg"
+            alt="Variables y Tipos de Datos en JavaScript"
+          />
+          <p>
+            En JavaScript, las variables son contenedores para almacenar datos.
+            Existen tres formas de declarar variables:
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              // Usando var (forma antigua)<br />
+              var nombre = "Juan";<br /><br />
+
+              // Usando let (recomendado para variables que cambian)<br />
+              let edad = 25;<br /><br />
+
+              // Usando const (para valores constantes)<br />
+              const PI = 3.1416;
+            </code>
+          </div>
+          <p>JavaScript tiene varios tipos de datos fundamentales:</p>
+          <ul>
+            <li>
+              <strong>String</strong>: Para textos. Ejemplo:
+              <code>"Hola mundo"</code>
+            </li>
+            <li>
+              <strong>Number</strong>: Para números (enteros y decimales).
+              Ejemplo: <code>42</code>, <code>3.14</code>
+            </li>
+            <li>
+              <strong>Boolean</strong>: Para valores verdadero/falso. Ejemplo:
+              <code>true</code>, <code>false</code>
+            </li>
+            <li>
+              <strong>Undefined</strong>: Para variables declaradas sin valor.
+              Ejemplo: <code>let x;</code>
+            </li>
+            <li>
+              <strong>Null</strong>: Para representar la ausencia de valor.
+              Ejemplo: <code>let y = null;</code>
+            </li>
+            <li>
+              <strong>Object</strong>: Para colecciones de datos. Ejemplo:
+              <code>{nombre: "Ana", edad: 30}</code>
+            </li>
+            <li>
+              <strong>Array</strong>: Para listas ordenadas. Ejemplo:
+              <code>[1, 2, 3, 4]</code>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="operadores">
+        <h2>Operadores en JavaScript</h2>
+        <div class="tema">
+          <img src="img/js2.png" alt="Operadores en JavaScript" />
+          <p>
+            JavaScript incluye varios tipos de operadores que nos permiten
+            realizar diferentes operaciones con valores y variables:
+          </p>
+          <p>
+            <strong>Operadores Aritméticos:</strong> Se utilizan para realizar
+            operaciones matemáticas básicas.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              let a = 10;<br />
+              let b = 5;<br /><br />
+
+              let suma = a + b; // 15<br />
+              let resta = a - b; // 5<br />
+              let multiplicacion = a * b; // 50<br />
+              let division = a / b; // 2<br />
+              let modulo = a % b; // 0 (el resto de la división)<br />
+              let exponente = a ** b; // 100000 (10 elevado a 5)
+            </code>
+          </div>
+          <p>
+            <strong>Operadores de Comparación:</strong> Se utilizan para
+            comparar valores y devuelven un valor booleano.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              let a = 10;<br />
+              let b = 5;<br />
+              let c = "10";<br /><br />
+
+              a > b; // true (mayor que)<br />
+              a < b; // false (menor que)<br />
+              a >= b; // true (mayor o igual que)<br />
+              a <= b; // false (menor o igual que)<br />
+              a == c; // true (igualdad, convierte tipos)<br />
+              a === c; // false (igualdad estricta, verifica tipo)<br />
+              a != b; // true (desigualdad)<br />
+              a !== c; // true (desigualdad estricta)
+            </code>
+          </div>
+          <p>
+            <strong>Operadores Lógicos:</strong> Se utilizan para combinar
+            expresiones booleanas.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              let x = true;<br />
+              let y = false;<br /><br />
+
+              x && y; // false (AND lógico)<br />
+              x || y; // true (OR lógico)<br />
+              !x; // false (NOT lógico)
+            </code>
+          </div>
+        </div>
+      </section>
+
+      <section id="estructuras">
+        <h2>Estructuras de Control</h2>
+        <div class="tema">
+          <img src="img/js4.webp" alt="Estructuras de Control en JavaScript" />
+          <p>
+            Las estructuras de control permiten modificar el flujo de ejecución
+            de un programa. En JavaScript, tenemos varias estructuras
+            importantes:
+          </p>
+          <p>
+            <strong>Condicionales:</strong> Permiten ejecutar diferentes bloques
+            de código según una condición.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              // Estructura if-else<br />
+              let edad = 18;<br /><br />
+
+              if (edad >= 18) {<br />
+              console.log("Eres mayor de edad");<br />
+              } else {<br />
+              console.log("Eres menor de edad");<br />
+              }<br /><br />
+
+              // Estructura if-else if-else<br />
+              let nota = 85;<br /><br />
+
+              if (nota >= 90) {<br />
+              console.log("Sobresaliente");<br />
+              } else if (nota >= 70) {<br />
+              console.log("Notable");<br />
+              } else if (nota >= 60) {<br />
+              console.log("Aprobado");<br />
+              } else {<br />
+              console.log("Reprobado");<br />
+              }<br /><br />
+
+              // Operador ternario<br />
+              let resultado = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
+            </code>
+          </div>
+          <p>
+            <strong>Bucles:</strong> Permiten ejecutar un bloque de código
+            repetidamente.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              // Bucle for<br />
+              for (let i = 0; i < 5; i++) {<br />
+              console.log("Iteración " + i);<br />
+              }<br /><br />
+
+              // Bucle while<br />
+              let contador = 0;<br />
+              while (contador < 5) {<br />
+              console.log("Contador: " + contador);<br />
+              contador++;<br />
+              }<br /><br />
+
+              // Bucle do-while<br />
+              let num = 1;<br />
+              do {<br />
+              console.log("Número: " + num);<br />
+              num++;<br />
+              } while (num <= 5);
+            </code>
+          </div>
+          <p>
+            <strong>Switch:</strong> Permite evaluar una expresión e igualarla
+            con diferentes casos.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              let dia = 3;<br />
+              let nombreDia;<br /><br />
+
+              switch (dia) {<br />
+              case 1:<br />
+              nombreDia = "Lunes";<br />
+              break;<br />
+              case 2:<br />
+              nombreDia = "Martes";<br />
+              break;<br />
+              case 3:<br />
+              nombreDia = "Miércoles";<br />
+              break;<br />
+              case 4:<br />
+              nombreDia = "Jueves";<br />
+              break;<br />
+              case 5:<br />
+              nombreDia = "Viernes";<br />
+              break;<br />
+              case 6:<br />
+              case 7:<br />
+              nombreDia = "Fin de semana";<br />
+              break;<br />
+              default:<br />
+              nombreDia = "Día inválido";<br />
+              }<br />
+              console.log("Hoy es " + nombreDia);
+            </code>
+          </div>
+        </div>
+      </section>
+
+      <section id="funciones">
+        <h2>Funciones en JavaScript</h2>
+        <div class="tema">
+          <img src="img/js5.png" alt="Funciones en JavaScript" />
+          <p>
+            Las funciones son bloques de código diseñados para realizar una
+            tarea específica. Permiten reutilizar código y organizar mejor
+            nuestros programas.
+          </p>
+          <p>
+            <strong>Declaración de Funciones:</strong> Existen varias formas de
+            declarar funciones en JavaScript.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              // Declaración de función<br />
+              function saludar(nombre) {<br />
+              return "¡Hola, " + nombre + "!";<br />
+              }<br /><br />
+
+              // Expresión de función<br />
+              const despedir = function(nombre) {<br />
+              return "¡Adiós, " + nombre + "!";<br />
+              };<br /><br />
+
+              // Función flecha (arrow function)<br />
+              const sumar = (a, b) => a + b;
+            </code>
+          </div>
+          <p>
+            <strong>Parámetros y Argumentos:</strong> Las funciones pueden
+            recibir parámetros y devolver valores.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              function calcularArea(base, altura) {<br />
+              return base * altura;<br />
+              }<br /><br />
+
+              // Llamando a la función<br />
+              let area = calcularArea(5, 3); // area = 15
+            </code>
+          </div>
+          <p>
+            <strong>Funciones con Parámetros por Defecto:</strong> Podemos
+            asignar valores predeterminados a los parámetros.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              function saludar(nombre = "amigo") {<br />
+              return "¡Hola, " + nombre + "!";<br />
+              }<br /><br />
+
+              saludar(); // "¡Hola, amigo!"<br />
+              saludar("María"); // "¡Hola, María!"
+            </code>
+          </div>
+          <p>
+            <strong>Ámbito (Scope) de las Variables:</strong> Las variables
+            declaradas dentro de una función tienen un ámbito local.
+          </p>
+          <div class="ejemplo-codigo">
+            <code>
+              let x = 10; // Variable global<br /><br />
+
+              function test() {<br />
+              let y = 20; // Variable local<br />
+              console.log(x); // 10 (puede acceder a la variable global)<br />
+              console.log(y); // 20<br />
+              }<br /><br />
+
+              test();<br />
+              console.log(x); // 10<br />
+              // console.log(y); // Error: y no está definida fuera de la
+              función
+            </code>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>
+        © 2025 Tutorial de Fundamentos de JavaScript | evidencia
+        GA6-220501096-AA4-EV01. ROBINSON ANAYA MACIAS
+      </p>
+    </footer>
+  </body>
+</html>
